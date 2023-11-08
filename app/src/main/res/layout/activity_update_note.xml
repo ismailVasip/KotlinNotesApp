@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".UpdateNoteActivity">
+
+    <TextView
+        android:id="@+id/tv_editNotHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tinos"
+        android:text="@string/edit_note"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
+
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:id="@+id/iv_updateDone"
+        android:src="@drawable/baseline_done_24"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/tv_editNotHeader"
+        android:layout_marginEnd="6dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_updateTittle"
+        android:hint="@string/enter_tittle"
+        android:fontFamily="@font/tinos"
+        android:padding="12dp"
+        android:textSize="20sp"
+        android:layout_below="@id/iv_updateDone"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/red_border"
+        android:maxLines="1"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/et_updateTittle"
+        android:background="@drawable/red_border"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tinos"
+                android:id="@+id/et_updateContent"
+                android:hint="@string/enter_the_description"
+                android:background="@null"
+                android:padding="12dp"
+                android:textSize="18sp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
